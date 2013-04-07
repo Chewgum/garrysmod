@@ -183,4 +183,4 @@ function GM:CanEditVariable( ent, ply, key, val, editor )
 	-- default in sandbox is.. anyone can edit anything.
 	return true
 
-end
+end dsa
