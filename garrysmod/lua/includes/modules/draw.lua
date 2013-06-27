@@ -1,4 +1,3 @@
-
 local CurTime = CurTime
 local pairs = pairs
 local table = table
@@ -334,4 +333,32 @@ end
 
 function NoTexture()
 	surface.SetTexture( Tex_white )
+end
+
+function SimpleRect( x, y, w, h, color )
+	surface.SetDrawColor( color )
+	surface.DrawRect( x, y, w, h )
+end
+
+function SimpleOutlined( x, y, w, h, color )
+	surface.SetDrawColor( color )
+	surface.DrawOutlinedRect( x, y, w, h )
+end
+
+function Texture( x, y, w, h, color, texture )
+	surface.SetDrawColor( color )
+	surface.SetTexture( texture )
+	surface.DrawTexturedRect( x, y, w, h )
+end
+
+function Material( x, y, w, h, color, material )
+	surface.SetDrawColor( color )
+	surface.SetMaterial( material )
+	surface.DrawTexturedRect( x, y, w, h )
+end
+
+function TextureRotated( x, y, w, h, color, texture, rotated )
+	surface.SetDrawColor( color )
+	surface.SetTexture( texture )
+	surface.DrawTexturedRectRotated( x, y, w, h, rotated )
 end
